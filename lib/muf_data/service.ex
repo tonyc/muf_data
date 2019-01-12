@@ -1,8 +1,6 @@
 defmodule MufData.Service do
-  @http_adapter Application.get_env(:muf_data, __MODULE__)[:http_adapter]
-
   def fetch_stations() do
-    with {:ok, response} <- @http_adapter.get(full_url()),
+    with {:ok, response} <- http_adapter().get(full_url()),
          {:ok, json} <- Jason.decode(response.body) do
       {:ok, json["stations"]}
     end
@@ -13,6 +11,14 @@ defmodule MufData.Service do
   end
 
   defp base_url() do
-    Application.get_env(:muf_data, __MODULE__)[:base_url]
+    get_env()[:base_url]
+  end
+
+  defp http_adapter() do
+    get_env()[:http_adapter]
+  end
+
+  defp get_env() do
+    Application.get_env(:muf_data, __MODULE__)
   end
 end

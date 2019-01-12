@@ -22,8 +22,8 @@ use Mix.Config
 #
 
 config :muf_data, MufData.Service,
-  base_url: "https://iono-data.halogenlabs.net",
-  http_adapter: HTTPoison
+  http_adapter: HTTPoison,
+  base_url: System.get_env("MUF_DATA_API_BASE")
 
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment
