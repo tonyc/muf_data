@@ -1,4 +1,4 @@
-defmodule MufData.Adapters.MockHttpAdapter do
+defmodule MufData.Adapters.MockAdapter do
   @sample_data_file "sample_data/muf.json"
 
   def fetch_stations() do
