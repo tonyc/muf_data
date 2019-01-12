@@ -1,18 +1,5 @@
 defmodule MufData do
-  @moduledoc """
-  Documentation for MufData.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> MufData.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def fetch_stations() do
+    with {:ok, result} <- HTTPoison.get
   end
 end
