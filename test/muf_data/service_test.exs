@@ -5,4 +5,3 @@ defmodule MufData.ServiceTest do
     assert true == true
   end
 end
-
