@@ -14,7 +14,6 @@ defmodule MufData.ServiceTest do
   end
 
   defp find_station_by_name(stations, name) do
-    stations
-    |> Enum.find(fn s -> s["name"] == name end)
+    Enum.find(stations, fn s -> s["name"] == name end)
   end
 end
