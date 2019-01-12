@@ -11,14 +11,14 @@ defmodule MufData.Service do
   end
 
   defp base_url() do
-    get_env()[:base_url]
+    get_config(:base_url)
   end
 
   defp http_adapter() do
-    get_env()[:http_adapter]
+    get_config(:http_adapter)
   end
 
-  defp get_env() do
-    Application.get_env(:muf_data, __MODULE__)
+  defp get_config(name) do
+    Application.get_env(:muf_data, __MODULE__)[name]
   end
 end
