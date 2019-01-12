@@ -6,11 +6,15 @@ defmodule MufData.ServiceTest do
 
     assert Enum.count(stations) == 78
 
-    wallops =
-      stations
-      |> Enum.find(fn s -> s["name"] == "Wallops" end)
+    station = find_station_by_name(stations, "Wallops")
 
-    assert wallops["muf_mhz"] == 19.012
-    assert wallops["timestamp"] == "2019-01-12T17:10:00Z"
+    assert station["name"] == "Wallops"
+    assert station["muf_mhz"] == 19.012
+    assert station["timestamp"] == "2019-01-12T17:10:00Z"
+  end
+
+  defp find_station_by_name(stations, name) do
+    stations
+    |> Enum.find(fn s -> s["name"] == name end)
   end
 end
