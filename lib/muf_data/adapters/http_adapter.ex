@@ -11,6 +11,6 @@ defmodule MufData.Adapters.HttpAdapter do
   end
 
   defp base_url() do
-    Application.get_env(:muf_data, :base_url)
+    Application.get_env(:muf_data, __MODULE__)[:base_url]
   end
 end

@@ -21,7 +21,7 @@ use Mix.Config
 #     config :logger, level: :info
 #
 
-config :muf_data, base_url: "https://iono-data.halogenlabs.net"
+config :muf_data, MufData.Adapters.HttpAdapter, base_url: "https://iono-data.halogenlabs.net"
 
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment
