@@ -23,9 +23,9 @@ The MufData.Service module needs up to two configuration settings, e.g.:
       http_adapter: HTTPoison,
       base_url: "https://host"
 
-+http_adapter+ is the name of a module that responds to get/3, (i.e. uses the HTTPoison API)
+`http_adapter` is the name of a module that responds to get/3, (i.e. uses the HTTPoison API)
 
-+base_url+ is the url to the host running the API, e.g. `https://hostname` -- without a trailing slash or path.
+`base_url` is the url to the host running the API, e.g. `https://hostname` -- without a trailing slash or path.
 
 You can configure the MUF API Base url from ENV, e.g.:
 
