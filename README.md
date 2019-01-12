@@ -1,6 +1,6 @@
 # MufData
 
-**TODO: Add description**
+Wrapper package for maximum usable frequency (MUF) data API.
 
 ## Installation
 
