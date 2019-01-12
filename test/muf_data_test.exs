@@ -1,8 +1,8 @@
-defmodule MufData.ServiceTest do
+defmodule MufData.Test do
   use ExUnit.Case
 
   test "picks out the stations key from the returned JSON" do
-    {:ok, stations} = MufData.Service.fetch_stations()
+    {:ok, stations} = MufData.fetch_stations()
 
     assert Enum.count(stations) == 78
 

@@ -1,3 +1,3 @@
 use Mix.Config
 
-config :muf_data, service_adapter: MufData.Adapters.HttpAdapter
+# config :muf_data, http_adapter: HTTPoison

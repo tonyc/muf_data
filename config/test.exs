@@ -1,3 +1,3 @@
 use Mix.Config
 
-config :muf_data, service_adapter: MufData.Adapters.MockAdapter
+config :muf_data, MufData.Service, http_adapter: MufData.Adapters.FakeHTTPAdapter
